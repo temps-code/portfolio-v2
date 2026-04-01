@@ -1,6 +1,6 @@
 # Skill: Framer Motion Animations
 
-## Variantes base reutilizables
+## Base reusable variants
 
 ```typescript
 // src/lib/animations.ts
@@ -20,24 +20,24 @@ export const fadeIn = {
 }
 ```
 
-## Patrón scroll-triggered
+## Scroll-triggered pattern
 
 ```tsx
 import { motion } from 'framer-motion'
 import { fadeInUp } from '@/lib/animations'
 
-// Siempre usar whileInView + viewport once:true para performance
+// Always use whileInView + viewport once:true for performance
 <motion.div
   variants={fadeInUp}
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true, margin: '-50px' }}
 >
-  contenido
+  content
 </motion.div>
 ```
 
-## Patrón stagger en lista
+## Stagger list pattern
 
 ```tsx
 <motion.ul variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -49,8 +49,8 @@ import { fadeInUp } from '@/lib/animations'
 </motion.ul>
 ```
 
-## Reglas
-- `viewport={{ once: true }}` siempre — no re-animar en scroll up
-- No usar `animate` directamente para scroll — usar `whileInView`
-- Duraciones: 0.3-0.6s máximo. Más de eso se siente lento.
-- Componentes con Framer Motion en Astro requieren `client:load`
+## Rules
+- `viewport={{ once: true }}` always — do not re-animate on scroll up
+- Never use `animate` directly for scroll — use `whileInView`
+- Durations: 0.3–0.6s max. Longer feels sluggish.
+- Components using Framer Motion in Astro require `client:load`

@@ -3,40 +3,49 @@
 ## Stack
 - Astro + React 19 + TypeScript (strict)
 - Tailwind CSS v4
-- Framer Motion (animaciones)
+- Framer Motion (animations)
 - Deploy: Vercel
 
-## Estructura
+## Project Structure
 ```
 src/
 ├── components/
-│   ├── ui/         → componentes reutilizables (Button, Badge, Card...)
-│   └── sections/   → secciones de la página (Hero, Projects, About...)
-├── layouts/        → layouts Astro (BaseLayout.astro)
-├── lib/            → utilidades (cn, helpers)
-├── data/           → datos estáticos (projects.ts, skills.ts)
+│   ├── ui/         → reusable components (Button, Badge, Card...)
+│   └── sections/   → page sections (Hero, Projects, About...)
+├── layouts/        → Astro layouts (BaseLayout.astro)
+├── i18n/           → translations (en.ts, es.ts, utils.ts)
+├── lib/            → utilities (cn, animations)
+├── data/           → static data (projects.ts, skills.ts)
 ├── styles/
-│   └── global.css  → estilos globales + Tailwind import
+│   └── global.css  → global styles + Tailwind import
 └── pages/
-    └── index.astro → página principal
+    └── index.astro → main page
 ```
 
-## Convenciones
-- Componentes interactivos (con animaciones/eventos) → `.tsx` en React
-- Componentes estáticos (estructura/layout) → `.astro`
-- Animaciones con `client:load` directive en Astro cuando se usan componentes React
-- Clases Tailwind con `cn()` de `src/lib/utils.ts`
-- Sin emojis en el contenido del portfolio
-- Tipografía: Inter (sistema) o definida en global.css
+## Conventions
+- Interactive components (animations/events) → `.tsx` (React)
+- Static components (structure/layout) → `.astro`
+- Animations with `client:load` directive when using React components in Astro
+- Tailwind classes with `cn()` from `src/lib/utils.ts`
+- No emojis in portfolio content
+- Typography: Inter or defined in global.css
 
-## Comandos
+## i18n
+- Default language: English (`en`)
+- Supported languages: English (`en`), Spanish (`es`)
+- Translations live in `src/i18n/en.ts` and `src/i18n/es.ts`
+- Language toggle is a React component (client-side, localStorage persistence)
+- No URL-based routing for languages — toggle switches in-place
+
+## Commands
 ```bash
-npm run dev      # dev server en localhost:4321
-npm run build    # build de producción
-npm run preview  # preview del build
+npm run dev      # dev server at localhost:4321
+npm run build    # production build
+npm run preview  # preview build
 ```
 
-## Reglas
-- No agregar dependencias sin justificación
-- Framer Motion solo en componentes React con `client:load`
-- Mantener data separada de los componentes (en src/data/)
+## Rules
+- Do not add dependencies without justification
+- Framer Motion only in React components with `client:load`
+- Keep data separate from components (in src/data/)
+- Keep translations complete — both `en.ts` and `es.ts` must have the same keys

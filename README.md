@@ -1,43 +1,58 @@
-# Astro Starter Kit: Minimal
+# Portfolio — Diego Vargas
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio website built with Astro, React 19, Tailwind CSS v4, and Framer Motion.
+
+[Ver en español](README.es.md)
+
+## Tech Stack
+
+- **Framework**: [Astro](https://astro.build) — static site generation, minimal JS output
+- **UI**: [React 19](https://react.dev) — interactive components
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Language**: TypeScript (strict)
+- **Deploy**: [Vercel](https://vercel.com)
+
+## Features
+
+- Bilingual support — English (default) and Spanish, toggled client-side
+- Scroll-triggered animations with Framer Motion
+- Fully responsive design
+- Optimized performance — static HTML, minimal JavaScript
+- SEO-ready
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/          # Reusable components (Button, Badge, Card)
+│   └── sections/    # Page sections (Hero, Projects, About, Contact)
+├── layouts/         # Astro layouts
+├── i18n/            # Translation files (en.ts, es.ts)
+├── lib/             # Utilities (cn, animations)
+├── data/            # Static data (projects, skills)
+├── styles/          # Global styles
+└── pages/           # Routes
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Getting Started
 
-## 🚀 Project Structure
+```bash
+# Install dependencies
+npm install
 
-Inside of your Astro project, you'll see the following folders and files:
+# Start development server
+npm run dev
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Author
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Diego Vargas** — Full-Stack Developer
+- GitHub: [@temps-code](https://github.com/temps-code)

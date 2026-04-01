@@ -1,48 +1,55 @@
 # Agent Instructions — Portfolio Diego Vargas
 
-## Contexto del proyecto
-Portfolio personal de Diego Vargas (@temps-code) — Full-Stack Developer.
-Objetivo: conseguir trabajo remoto en Latam/España.
+## Project Context
+Personal portfolio for Diego Vargas (@temps-code) — Full-Stack Developer.
+Goal: land a remote job in Latam / Spain.
 
-## Stack técnico
+## Tech Stack
 - Astro (SSG) + React 19 + TypeScript strict
 - Tailwind CSS v4
-- Framer Motion para animaciones
-- Deploy en Vercel
+- Framer Motion for animations
+- Deploy on Vercel
 
-## Reglas para agentes
+## Agent Rules
 
-### Componentes
-- Componentes con animaciones o interactividad → `.tsx` (React)
-- Componentes estáticos → `.astro`
-- Siempre tipar props con `interface` en TypeScript
-- Usar `cn()` de `src/lib/utils.ts` para clases condicionales
+### Components
+- Components with animations or interactivity → `.tsx` (React)
+- Static components → `.astro`
+- Always type props with `interface` in TypeScript
+- Use `cn()` from `src/lib/utils.ts` for conditional classes
 
-### Animaciones
-- Todas las animaciones vía Framer Motion
-- Patrones preferidos: `fadeInUp`, `staggerChildren`
-- Los componentes React con Framer Motion en Astro requieren `client:load`
+### Animations
+- All animations via Framer Motion
+- Preferred patterns: `fadeInUp`, `staggerChildren` (see `.claude/skills/animations.md`)
+- React components with Framer Motion in Astro require `client:load`
 
-### Datos
-- Todo el contenido del portfolio vive en `src/data/`
-- `projects.ts` → array de proyectos con tipado
-- `skills.ts` → categorías de skills
-- Nunca hardcodear contenido dentro de componentes
+### i18n
+- All user-facing text must go through the translation system
+- Never hardcode strings inside components — use translation keys
+- Both `en.ts` and `es.ts` must stay in sync (same keys)
+- Language state managed client-side via localStorage
 
-### Estilo
-- Sin emojis
-- Estilo: minimalista, profesional, tipografía fuerte
-- Paleta: blanco/negro/gris con un acento (definido en global.css)
+### Data
+- All portfolio content lives in `src/data/`
+- `projects.ts` → typed projects array
+- `skills.ts` → skill categories
+- Never hardcode content inside components
 
-## Proyectos destacados (Tier 1)
-1. LION — Business Management System (React 19, Supabase, LIVE en Vercel)
+### Style
+- No emojis
+- Style: minimalist, professional, strong typography
+- Color palette: white/black/gray with one accent (defined in global.css)
+
+## Featured Projects (Tier 1)
+1. LION — Business Management System (React 19, Supabase, LIVE on Vercel)
 2. StackWise — Mobile app (React Native, Expo, Supabase)
 3. 404-Group Backend — Clean Architecture .NET 8
 4. Tourism Microservice — Docker + .NET 9
 5. ecommerce-b2c — Laravel 12 / PHP 8.4
 
-## NO hacer
-- No agregar dependencias sin justificación en CLAUDE.md
-- No mezclar contenido con estructura de componentes
-- No usar `any` en TypeScript
-- No animaciones exageradas — sutil y profesional
+## DO NOT
+- Add dependencies without justification in CLAUDE.md
+- Mix content with component structure
+- Use `any` in TypeScript
+- Over-animate — subtle and professional only
+- Hardcode user-facing text outside of i18n files
