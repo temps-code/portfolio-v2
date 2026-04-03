@@ -10,19 +10,24 @@ export const es: Translation = {
   hero: {
     greeting: 'Hola, soy',
     name: 'Diego Vargas',
-    role: 'Desarrollador Full-Stack',
+    role: 'Desarrollador Full Stack',
     description:
-      'Construyo aplicaciones web y móviles pensando en usuarios reales. Desde backends limpios hasta interfaces pulidas.',
+      'Transformo problemas de negocio en software que funciona.',
     cta_projects: 'Ver Proyectos',
-    cta_contact: 'Contactarme',
+    cta_contact: 'Hablemos',
   },
   about: {
     title: 'Sobre Mí',
     paragraph1:
-      'Soy desarrollador full-stack enfocado en crear productos que resuelven problemas reales. Trabajo en todo el stack — desde backends en .NET y PHP hasta frontends en React y React Native.',
+      'Soy estudiante de Ingeniería en Sistemas y desarrollador full stack con base en Tarija, Bolivia. Construyo software desde 2024 — trabajando en todo el stack, desde backends en .NET y esquemas PostgreSQL hasta frontends en React y React Native.',
     paragraph2:
-      'Me importa la arquitectura limpia, el código mantenible y lanzar cosas que funcionen en producción.',
+      'Mi enfoque es simple: sentarme con el cliente, entender lo que realmente necesita, diseñar la solución correcta y construirla. Me especializo en sistemas backend — arquitectura, bases de datos, lógica de negocio — pero entrego el producto completo cuando hace falta.',
+    paragraph3:
+      'Recientemente, llevé LION desde la primera reunión con el cliente hasta un sistema en producción que usa diariamente una agencia de diseño.',
     download_cv: 'Descargar CV',
+    years_experience: 'Años de Experiencia',
+    major_projects: 'Proyectos Principales',
+    tech_stacks: 'Stacks Tecnológicos',
   },
   projects: {
     title: 'Proyectos',
@@ -41,6 +46,18 @@ export const es: Translation = {
     email_label: 'Email',
     github_label: 'GitHub',
     linkedin_label: 'LinkedIn',
+    availability: 'Disponible para Proyectos',
+    form_name: 'Tu nombre',
+    form_email: 'Tu correo',
+    form_message: 'Tu mensaje',
+    form_send: 'Enviar mensaje',
+    form_sending: 'Enviando...',
+    form_success: 'Mensaje enviado. Te respondo pronto.',
+    form_error: 'Algo salió mal. Escribime directamente al correo.',
+  },
+  footer: {
+    built_with: 'Construido con Astro, React y Tailwind CSS',
+    copyright: '© 2025 Diego Vargas. Todos los derechos reservados.',
   },
   language_toggle: {
     label: 'EN',

@@ -1,0 +1,16 @@
+---
+import { getTranslation } from '../../i18n/utils'
+
+const t = getTranslation('en')
+---
+
+<footer class="bg-footer dark:bg-footer-dark px-8 lg:px-16 py-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-xs font-body text-on-surface-variant dark:text-on-surface-variant-dark">
+      {t.footer.built_with}
+    </p>
+    <p class="text-xs font-body text-on-surface-variant dark:text-on-surface-variant-dark">
+      {t.footer.copyright}
+    </p>
+  </div>
+</footer>

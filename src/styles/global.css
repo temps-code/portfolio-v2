@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Fonts */
+  --font-headline: 'Epilogue', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Surfaces — light default, dark variants */
+  --color-surface: #f8f7ff;
+  --color-surface-dark: #0e0e0e;
+
+  --color-surface-low: #f0eeff;
+  --color-surface-low-dark: #131313;
+
+  --color-surface-container: #e8e4ff;
+  --color-surface-container-dark: #201f1f;
+
+  --color-surface-container-high: #d8d4f5;
+  --color-surface-container-high-dark: #2a2a2a;
+
+  /* Text */
+  --color-on-surface: #1a1a2e;
+  --color-on-surface-dark: #e5e2e1;
+
+  --color-on-surface-variant: #5a00c6;
+  --color-on-surface-variant-dark: #ccc3d8;
+
+  /* Accent */
+  --color-accent: #7c3aed;
+  --color-accent-to: #8a4cfc;
+
+  /* Outline */
+  --color-outline: #c4b5fd;
+  --color-outline-dark: #4a4455;
+
+  /* Footer */
+  --color-footer: #ede9fe;
+  --color-footer-dark: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.dark body {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+::selection {
+  background-color: #7c3aed;
+  color: #ffffff;
+}

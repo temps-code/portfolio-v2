@@ -8,19 +8,24 @@ export const en = {
   hero: {
     greeting: 'Hi, I\'m',
     name: 'Diego Vargas',
-    role: 'Full-Stack Developer',
+    role: 'Full Stack Developer',
     description:
-      'I build web and mobile applications with real users in mind. From clean backends to polished UIs.',
+      'I turn business problems into working software.',
     cta_projects: 'View Projects',
     cta_contact: 'Get in Touch',
   },
   about: {
     title: 'About Me',
     paragraph1:
-      'I\'m a full-stack developer focused on building products that solve real problems. I work across the stack — from .NET and PHP backends to React and React Native frontends.',
+      'I\'m a Systems Engineering student and full stack developer based in Tarija, Bolivia. I\'ve been building software since 2024 — working across the entire stack, from .NET backends and PostgreSQL schemas to React and React Native frontends.',
     paragraph2:
-      'I care about clean architecture, maintainable code, and shipping things that actually work in production.',
+      'My approach is simple: sit with the client, understand what they really need, design the right solution, and build it. I specialize in backend systems — architecture, databases, business logic — but I ship the full product when needed.',
+    paragraph3:
+      'Most recently, I took LION from an initial client meeting to a live production system used daily by a design agency.',
     download_cv: 'Download CV',
+    years_experience: 'Years of Experience',
+    major_projects: 'Major Projects',
+    tech_stacks: 'Tech Stacks',
   },
   projects: {
     title: 'Projects',
@@ -39,10 +44,22 @@ export const en = {
     email_label: 'Email',
     github_label: 'GitHub',
     linkedin_label: 'LinkedIn',
+    availability: 'Open for Projects',
+    form_name: 'Your name',
+    form_email: 'Your email',
+    form_message: 'Your message',
+    form_send: 'Send message',
+    form_sending: 'Sending...',
+    form_success: 'Message sent. I\'ll get back to you soon.',
+    form_error: 'Something went wrong. Try emailing me directly.',
+  },
+  footer: {
+    built_with: 'Built with Astro, React & Tailwind CSS',
+    copyright: '© 2025 Diego Vargas. All rights reserved.',
   },
   language_toggle: {
     label: 'ES',
   },
-} as const
+}
 
 export type Translation = typeof en

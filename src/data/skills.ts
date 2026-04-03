@@ -36,6 +36,6 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'devops',
     label: { en: 'DevOps & Tools', es: 'DevOps y Herramientas' },
-    skills: ['Docker', 'Docker Compose', 'Vercel', 'Git', 'GitHub'],
+    skills: ['Linux', 'Docker', 'Docker Compose', 'Vercel', 'Git', 'GitHub'],
   },
 ]
