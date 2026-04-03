@@ -57,7 +57,7 @@ export const es: Translation = {
   },
   footer: {
     built_with: 'Construido con Astro, React y Tailwind CSS',
-    copyright: '© 2025 Diego Vargas. Todos los derechos reservados.',
+    copyright: '© 2026 Diego Vargas. Todos los derechos reservados.',
   },
   language_toggle: {
     label: 'EN',
