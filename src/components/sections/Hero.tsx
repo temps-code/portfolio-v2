@@ -18,7 +18,7 @@ const CODE_TEXT = `const developer = {
 }`
 
 export function Hero() {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
@@ -63,6 +63,13 @@ export function Hero() {
               <Button href="#projects">{t.hero.cta_projects}</Button>
               <Button href="#contact" variant="ghost">
                 {t.hero.cta_contact}
+              </Button>
+              <Button
+                href={`/cv/diego_vargas_cv_${locale}.pdf`}
+                download={`diego_vargas_cv_${locale}.pdf`}
+                variant="ghost"
+              >
+                {t.about.download_cv}
               </Button>
             </motion.div>
           </motion.div>

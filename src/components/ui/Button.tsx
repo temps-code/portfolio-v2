@@ -3,6 +3,7 @@ import { cn } from '../../lib/utils'
 interface ButtonProps {
   variant?: 'primary' | 'ghost'
   href?: string
+  download?: string
   onClick?: () => void
   children: React.ReactNode
   className?: string
@@ -12,6 +13,7 @@ interface ButtonProps {
 export function Button({
   variant = 'primary',
   href,
+  download,
   onClick,
   children,
   className,
@@ -31,7 +33,7 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} download={download} className={classes}>
         {children}
       </a>
     )
