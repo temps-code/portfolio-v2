@@ -38,4 +38,9 @@ export const skillCategories: SkillCategory[] = [
     label: { en: 'DevOps & Tools', es: 'DevOps y Herramientas' },
     skills: ['Linux', 'Docker', 'Docker Compose', 'Vercel', 'Git', 'GitHub'],
   },
+  {
+    id: 'soft-skills',
+    label: { en: 'Soft Skills', es: 'Habilidades Blandas' },
+    skills: ['Client Communication', 'Problem Solving', 'Team Collaboration', 'Adaptability', 'Technical Leadership'],
+  },
 ]

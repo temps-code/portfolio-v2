@@ -74,6 +74,9 @@ function ProjectCard({ project, locale, t }: ProjectCardProps) {
         <h3 className="font-headline font-bold text-lg text-on-surface dark:text-on-surface-dark">
           {project.title}
         </h3>
+        <p className="text-xs font-label text-accent">
+          {project.role}
+        </p>
         <p className="text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark leading-relaxed">
           {project.description[locale]}
         </p>

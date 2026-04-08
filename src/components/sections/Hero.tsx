@@ -7,7 +7,7 @@ import { cn } from '../../lib/utils'
 
 const CODE_TEXT = `const developer = {
   name: "Diego Vargas",
-  role: "Full Stack Developer",
+  role: "Backend Developer",
   focus: "backend systems",
   stack: {
     backend: [".NET / C#", "PostgreSQL", "Supabase"],

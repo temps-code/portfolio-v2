@@ -5,6 +5,7 @@ export interface Project {
     en: string
     es: string
   }
+  role: string
   tags: string[]
   liveUrl?: string
   repoUrl?: string
@@ -19,6 +20,7 @@ export const projects: Project[] = [
       en: 'Reduced a 1-hour manual billing process to 15 minutes for a real design agency — 75% operational improvement. Full business pipeline: quotations, jobs, clients, and payments. From first client meeting to production.',
       es: 'Redujo un proceso de facturación manual de 1 hora a 15 minutos para una agencia de diseño real — mejora operativa del 75%. Pipeline completo: cotizaciones, trabajos, clientes y pagos. Desde la primera reunión hasta producción.',
     },
+    role: 'Lead Developer — end to end, from client meeting to production',
     tags: ['React 19', 'TypeScript', 'Supabase', 'PostgreSQL'],
     liveUrl: 'https://lion-business-manager.vercel.app',
     repoUrl: 'https://github.com/temps-code/lion-business-manager',
@@ -31,6 +33,7 @@ export const projects: Project[] = [
       en: 'Mobile platform connecting developers with companies through real coding challenges. 12-table schema, RLS, real-time notifications.',
       es: 'Plataforma móvil que conecta desarrolladores con empresas mediante desafíos de código reales. Esquema de 12 tablas, RLS, notificaciones en tiempo real.',
     },
+    role: 'Full-Stack Developer — architecture design & mobile implementation',
     tags: ['React Native', 'TypeScript', 'Supabase', 'Zustand'],
     repoUrl: 'https://github.com/temps-code/StackWise',
     featured: true,
@@ -42,6 +45,7 @@ export const projects: Project[] = [
       en: 'REST API for tour management, reservations, and payments — dockerized with SQL Server, auto-migration on startup.',
       es: 'API REST para gestión de tours, reservas y pagos — dockerizada con SQL Server, migración automática al inicio.',
     },
+    role: 'Backend Developer — API design, containerization & deployment',
     tags: ['ASP.NET Core 9', 'C#', 'Docker', 'SQL Server'],
     repoUrl: 'https://github.com/temps-code/Web-Api---Microservicio-Turismo',
     featured: true,

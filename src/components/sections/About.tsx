@@ -82,14 +82,6 @@ export function About() {
             ))}
           </motion.div>
 
-          <motion.div variants={fadeInUp}>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-body font-medium text-accent opacity-50 pointer-events-none"
-            >
-              {t.about.download_cv}
-            </a>
-          </motion.div>
         </motion.div>
       </div>
       </div>

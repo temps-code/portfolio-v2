@@ -8,7 +8,7 @@ export const en = {
   hero: {
     greeting: 'Hi, I\'m',
     name: 'Diego Vargas',
-    role: 'Full Stack Developer',
+    role: 'Backend Developer',
     description:
       'I turn business problems into working software.',
     cta_projects: 'View Projects',
@@ -17,7 +17,7 @@ export const en = {
   about: {
     title: 'About Me',
     paragraph1:
-      'I\'m a Systems Engineering student and full stack developer based in Tarija, Bolivia. I\'ve been building software since 2024 — working across the entire stack, from .NET backends and PostgreSQL schemas to React and React Native frontends.',
+      'I\'m a Systems Engineering student and backend developer based in Tarija, Bolivia. I\'ve been building software since 2024 — specializing in .NET backends and PostgreSQL schemas, with solid experience in React and React Native frontends.',
     paragraph2:
       'My approach is simple: sit with the client, understand what they really need, design the right solution, and build it. I specialize in backend systems — architecture, databases, business logic — but I ship the full product when needed.',
     paragraph3:

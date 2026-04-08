@@ -10,7 +10,7 @@ export const es: Translation = {
   hero: {
     greeting: 'Hola, soy',
     name: 'Diego Vargas',
-    role: 'Desarrollador Full Stack',
+    role: 'Desarrollador Backend',
     description:
       'Transformo problemas de negocio en software que funciona.',
     cta_projects: 'Ver Proyectos',
@@ -19,7 +19,7 @@ export const es: Translation = {
   about: {
     title: 'Sobre Mí',
     paragraph1:
-      'Soy estudiante de Ingeniería en Sistemas y desarrollador full stack con base en Tarija, Bolivia. Construyo software desde 2024 — trabajando en todo el stack, desde backends en .NET y esquemas PostgreSQL hasta frontends en React y React Native.',
+      'Soy estudiante de Ingeniería en Sistemas y desarrollador backend con base en Tarija, Bolivia. Construyo software desde 2024 — especializándome en backends con .NET y esquemas PostgreSQL, con experiencia sólida en frontends con React y React Native.',
     paragraph2:
       'Mi enfoque es simple: sentarme con el cliente, entender lo que realmente necesita, diseñar la solución correcta y construirla. Me especializo en sistemas backend — arquitectura, bases de datos, lógica de negocio — pero entrego el producto completo cuando hace falta.',
     paragraph3:
