@@ -9,16 +9,6 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'frontend',
-    label: { en: 'Frontend', es: 'Frontend' },
-    skills: ['React 19', 'TypeScript', 'Tailwind CSS', 'Astro', 'Vite', 'Alpine.js'],
-  },
-  {
-    id: 'mobile',
-    label: { en: 'Mobile', es: 'Mobile' },
-    skills: ['React Native', 'Expo', 'NativeWind', 'Zustand'],
-  },
-  {
     id: 'backend',
     label: { en: 'Backend', es: 'Backend' },
     skills: ['ASP.NET Core', 'C#', 'Laravel', 'PHP', 'Node.js'],
@@ -37,6 +27,16 @@ export const skillCategories: SkillCategory[] = [
     id: 'devops',
     label: { en: 'DevOps & Tools', es: 'DevOps y Herramientas' },
     skills: ['Linux', 'Docker', 'Docker Compose', 'Vercel', 'Git', 'GitHub'],
+  },
+  {
+    id: 'frontend',
+    label: { en: 'Frontend', es: 'Frontend' },
+    skills: ['React 19', 'TypeScript', 'Tailwind CSS', 'Astro', 'Vite', 'Alpine.js'],
+  },
+  {
+    id: 'mobile',
+    label: { en: 'Mobile', es: 'Mobile' },
+    skills: ['React Native', 'Expo', 'NativeWind', 'Zustand'],
   },
   {
     id: 'soft-skills',

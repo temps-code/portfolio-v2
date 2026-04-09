@@ -12,7 +12,7 @@ export const es: Translation = {
     name: 'Diego Vargas',
     role: 'Desarrollador Backend',
     description:
-      'Transformo problemas de negocio en software que funciona.',
+      'Backend primero. Construyo los sistemas que sostienen los productos.',
     cta_projects: 'Ver Proyectos',
     cta_contact: 'Hablemos',
   },

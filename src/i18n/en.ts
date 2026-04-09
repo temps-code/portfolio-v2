@@ -10,7 +10,7 @@ export const en = {
     name: 'Diego Vargas',
     role: 'Backend Developer',
     description:
-      'I turn business problems into working software.',
+      'Backend-first. I build the systems that hold products together.',
     cta_projects: 'View Projects',
     cta_contact: 'Get in Touch',
   },

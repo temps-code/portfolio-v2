@@ -21,6 +21,7 @@ export function Navbar() {
 
   useEffect(() => {
     const sectionIds = ['about', 'projects', 'skills', 'contact']
+    const visible = new Set<string>()
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id) => {
@@ -28,7 +29,12 @@ export function Navbar() {
       if (!el) return
       const observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) setActiveSection(id)
+          if (entry.isIntersecting) {
+            visible.add(id)
+          } else {
+            visible.delete(id)
+          }
+          setActiveSection(sectionIds.find((s) => visible.has(s)) ?? '')
         },
         { threshold: 0.3 },
       )
