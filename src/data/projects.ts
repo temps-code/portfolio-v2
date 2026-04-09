@@ -12,6 +12,7 @@ export interface Project {
   role: string
   tags: string[]
   imageUrl?: string
+  imageLabel?: string
   screenshotUrl?: string
   liveUrl?: string
   repoUrl?: string
@@ -51,6 +52,7 @@ export const projects: Project[] = [
     role: 'Backend Developer — API design, containerization & deployment',
     tags: ['ASP.NET Core 9', 'C#', 'Docker', 'SQL Server'],
     imageUrl: '/Capturas/Tourism%20Microservice.png',
+    imageLabel: 'Architecture',
     repoUrl: 'https://github.com/temps-code/Web-Api---Microservicio-Turismo',
     featured: true,
   },

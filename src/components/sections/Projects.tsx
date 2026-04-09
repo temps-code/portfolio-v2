@@ -247,7 +247,7 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
                     : 'text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark'
                 }`}
               >
-                MockUp
+                {project.imageLabel ?? 'MockUp'}
               </button>
               <button
                 onClick={() => setActiveTab('screenshot')}
@@ -261,7 +261,7 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
               </button>
             </div>
           ) : (
-            <span className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark">MockUp</span>
+            <span className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark">{project.imageLabel ?? 'MockUp'}</span>
           )}
           <div className="flex items-center gap-1">
             <button
