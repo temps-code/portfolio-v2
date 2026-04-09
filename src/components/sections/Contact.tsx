@@ -62,9 +62,10 @@ export function Contact() {
               variants={fadeInUp}
               href={`mailto:${contact.email}`}
               className="inline-flex items-center gap-2 text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark hover:text-on-surface dark:hover:text-on-surface-dark transition-colors group"
+              aria-label={contact.email}
             >
               <EmailIcon />
-              <span className="group-hover:underline underline-offset-4">{contact.email}</span>
+              <span className="hidden sm:inline group-hover:underline underline-offset-4">{contact.email}</span>
             </motion.a>
             <motion.a
               variants={fadeInUp}
@@ -72,9 +73,10 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark hover:text-on-surface dark:hover:text-on-surface-dark transition-colors group"
+              aria-label={t.contact.github_label}
             >
               <GitHubIcon />
-              <span className="group-hover:underline underline-offset-4">{t.contact.github_label}</span>
+              <span className="hidden sm:inline group-hover:underline underline-offset-4">{t.contact.github_label}</span>
             </motion.a>
             <motion.a
               variants={fadeInUp}
@@ -82,9 +84,10 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark hover:text-on-surface dark:hover:text-on-surface-dark transition-colors group"
+              aria-label={t.contact.linkedin_label}
             >
               <LinkedInIcon />
-              <span className="group-hover:underline underline-offset-4">{t.contact.linkedin_label}</span>
+              <span className="hidden sm:inline group-hover:underline underline-offset-4">{t.contact.linkedin_label}</span>
             </motion.a>
           </motion.div>
         </motion.div>

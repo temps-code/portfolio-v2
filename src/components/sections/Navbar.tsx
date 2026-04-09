@@ -97,13 +97,28 @@ export function Navbar() {
           </button>
         </div>
 
-        <button
-          className="md:hidden p-2 text-on-surface dark:text-on-surface-dark"
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <XIcon /> : <MenuIcon />}
-        </button>
+        <div className="flex md:hidden items-center gap-1">
+          <button
+            onClick={toggleLocale}
+            className="text-sm font-medium text-on-surface-variant dark:text-on-surface-variant-dark hover:text-on-surface dark:hover:text-on-surface-dark transition-colors px-2 py-1"
+          >
+            {t.language_toggle.label}
+          </button>
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-on-surface-variant dark:text-on-surface-variant-dark hover:text-on-surface dark:hover:text-on-surface-dark transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button
+            className="p-2 text-on-surface dark:text-on-surface-dark"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <XIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -132,21 +147,6 @@ export function Navbar() {
                   </a>
                 </li>
               ))}
-              <li className="flex items-center gap-3 pt-2 border-t border-outline/20 dark:border-outline-dark/20">
-                <button
-                  onClick={toggleLocale}
-                  className="text-sm font-medium text-on-surface-variant dark:text-on-surface-variant-dark"
-                >
-                  {t.language_toggle.label}
-                </button>
-                <button
-                  onClick={toggleTheme}
-                  className="p-1 text-on-surface-variant dark:text-on-surface-variant-dark"
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-                </button>
-              </li>
             </ul>
           </motion.div>
         )}
