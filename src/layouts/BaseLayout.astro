@@ -7,9 +7,12 @@ interface Props {
 }
 
 const {
-  title = 'Diego Vargas — Full Stack Developer',
-  description = 'Full stack developer specialized in backend systems. I turn business problems into working software.',
+  title = 'Diego Vargas — Backend Developer',
+  description = 'Backend Developer based in Bolivia. I build robust systems with .NET, PostgreSQL, and React — from architecture to production.',
 } = Astro.props
+
+const site = 'https://diego-vargas.vercel.app'
+const ogImage = `${site}/og-image.png`
 ---
 
 <!doctype html>
@@ -17,16 +20,57 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+
+    <!-- Primary -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Diego Vargas" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={site} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={site} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Diego Vargas — Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Person schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Diego Vargas",
+        "jobTitle": "Backend Developer",
+        "url": "https://diego-vargas.vercel.app",
+        "sameAs": [
+          "https://github.com/temps-code",
+          "https://www.linkedin.com/in/diego-vargas-urzagaste"
+        ],
+        "knowsAbout": ["Backend Development", ".NET", "C#", "PostgreSQL", "Docker", "React"]
+      }
+    </script>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Manrope:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <script is:inline>
       const theme = localStorage.getItem('theme') ?? 'dark'
       if (theme === 'dark') document.documentElement.classList.add('dark')
