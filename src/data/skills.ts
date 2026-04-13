@@ -39,6 +39,11 @@ export const skillCategories: SkillCategory[] = [
     skills: ['React Native', 'Expo', 'NativeWind', 'Zustand'],
   },
   {
+    id: 'ai-tools',
+    label: { en: 'AI Tools', es: 'Herramientas IA' },
+    skills: ['Claude Code', 'Gemini CLI', 'GitHub Copilot'],
+  },
+  {
     id: 'soft-skills',
     label: { en: 'Soft Skills', es: 'Habilidades Blandas' },
     skills: ['Client Communication', 'Problem Solving', 'Team Collaboration', 'Adaptability', 'Technical Leadership'],

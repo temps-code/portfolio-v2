@@ -49,7 +49,7 @@ export const projects: Project[] = [
       en: 'REST API covering the full lifecycle of a tourism system: tour catalog, user registration, reservations with capacity validation, and payment tracking. Built with ASP.NET Core 9 and Entity Framework Core — the database migrates and seeds automatically on container startup, so there is no manual setup. Containerized with Docker Compose: the API and SQL Server 2022 run as isolated services with a single command. Key decisions: soft delete with IsActive flag on all entities, password hashing with HMACSHA512 + salt, and CORS configured for development environments.',
       es: 'API REST que cubre el ciclo completo de un sistema de turismo: catálogo de tours, registro de usuarios, reservas con validación de capacidad y seguimiento de pagos. Construida con ASP.NET Core 9 y Entity Framework Core — la base de datos migra y seedea automáticamente al iniciar el contenedor, sin configuración manual. Dockerizada con Docker Compose: la API y SQL Server 2022 corren como servicios aislados con un solo comando. Decisiones clave: soft delete con flag IsActive en todas las entidades, hash de contraseñas con HMACSHA512 + salt, y CORS configurado para entornos de desarrollo.',
     },
-    role: 'Backend Developer — API design, containerization & deployment',
+    role: 'Backend Developer — API design, containerization & deployment · Presented at Expotec UPDS 2025',
     tags: ['ASP.NET Core 9', 'C#', 'Docker', 'SQL Server'],
     imageUrl: '/Capturas/Tourism%20Microservice.png',
     imageLabel: 'Architecture',
