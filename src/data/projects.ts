@@ -14,6 +14,7 @@ export interface Project {
   imageUrl?: string
   imageLabel?: string
   screenshotUrl?: string
+  screenshotLabel?: string
   liveUrl?: string
   repoUrl?: string
   featured: boolean
@@ -39,6 +40,27 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 'innhub',
+    title: 'InnHub — Accommodation Management System',
+    description: {
+      en: 'Configurable accommodation management system for hotels, hostels, and inns — 12 modules, 14 domain entities, 5 access roles.',
+      es: 'Sistema de gestión hotelera configurable para hoteles, hostales y residencias — 12 módulos, 14 entidades de dominio, 5 roles de acceso.',
+    },
+    detailedDescription: {
+      en: 'Academic/professional MVP that centralizes the operational workflow of accommodation businesses: properties, rooms, guests, reservations, check-ins, housekeeping, maintenance, billing, payments, occupancy reports, and dashboard metrics. Designed as a configurable COTS-style product with Clean Architecture layers, Atomic Design for shared UI primitives, and feature-based organization. Built with React, TypeScript, Tailwind CSS, and InsForge as the BaaS backend with PostgreSQL. Includes comprehensive product documentation: product overview, MVP scope, domain model, architecture decisions, and functional specification.',
+      es: 'MVP académico/profesional que centraliza el flujo operativo de negocios de alojamiento: propiedades, habitaciones, huéspedes, reservas, check-in, housekeeping, mantenimiento, facturación, pagos, reportes de ocupación y métricas de dashboard. Diseñado como producto configurable estilo COTS con capas de Clean Architecture, Atomic Design para primitivas de UI compartidas y organización por features. Construido con React, TypeScript, Tailwind CSS e InsForge como BaaS con PostgreSQL. Incluye documentación completa del producto: visión general, alcance MVP, modelo de dominio, decisiones de arquitectura y especificación funcional.',
+    },
+    role: 'Full-Stack Developer — architecture, design & implementation',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'InsForge', 'Vitest'],
+    imageUrl: '/assets/innhub-hero.png',
+    screenshotUrl: '/assets/architecture-overview.png',
+    imageLabel: 'Prototype',
+    screenshotLabel: 'Architecture',
+    liveUrl: 'https://inn-hub.vercel.app/',
+    repoUrl: 'https://github.com/temps-code/InnHub',
+    featured: true,
+  },
+  {
     id: 'tourism-microservice',
     title: 'Tourism Microservice',
     description: {
@@ -54,7 +76,7 @@ export const projects: Project[] = [
     imageUrl: '/Capturas/Tourism%20Microservice.png',
     imageLabel: 'Architecture',
     repoUrl: 'https://github.com/temps-code/Web-Api---Microservicio-Turismo',
-    featured: true,
+    featured: false,
   },
   {
     id: 'brecha-digital',

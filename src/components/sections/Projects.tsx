@@ -9,6 +9,7 @@ import type { Locale } from '../../i18n/utils'
 
 const gradientMap: Record<string, string> = {
   lion: 'from-yellow-500 via-amber-400 to-orange-400',
+  innhub: 'from-purple-600 via-violet-500 to-indigo-400',
   'tourism-microservice': 'from-emerald-500 via-teal-400 to-cyan-500',
   'brecha-digital': 'from-indigo-600 via-blue-500 to-cyan-400',
 }
@@ -257,7 +258,7 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
                     : 'text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark'
                 }`}
               >
-                {locale === 'es' ? 'Captura' : 'Screenshot'}
+                {project.screenshotLabel ?? (locale === 'es' ? 'Captura' : 'Screenshot')}
               </button>
             </div>
           ) : (

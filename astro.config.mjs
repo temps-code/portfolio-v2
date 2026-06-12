@@ -9,6 +9,12 @@ export default defineConfig({
   integrations: [react()],
 
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['@emailjs/browser'],
+    },
+    ssr: {
+      noExternal: ['@emailjs/browser'],
+    },
+  },
 });

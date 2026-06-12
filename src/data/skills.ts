@@ -11,7 +11,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'backend',
     label: { en: 'Backend', es: 'Backend' },
-    skills: ['ASP.NET Core', 'C#', 'Laravel', 'PHP', 'Node.js'],
+    skills: ['C#', 'ASP.NET Core', 'PHP', 'Laravel', 'Python', 'TypeScript'],
   },
   {
     id: 'architecture',
@@ -21,17 +21,17 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'databases',
     label: { en: 'Databases', es: 'Bases de datos' },
-    skills: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB', 'Supabase'],
+    skills: ['PostgreSQL', 'SQL Server', 'MySQL', 'MongoDB', 'Supabase', 'InsForge'],
   },
   {
     id: 'devops',
     label: { en: 'DevOps & Tools', es: 'DevOps y Herramientas' },
-    skills: ['Linux', 'Docker', 'Docker Compose', 'Vercel', 'Git', 'GitHub'],
+    skills: ['Git', 'Docker', 'Docker Compose', 'Linux', 'Streamlit', 'Vercel', 'Scrum'],
   },
   {
     id: 'frontend',
     label: { en: 'Frontend', es: 'Frontend' },
-    skills: ['React 19', 'TypeScript', 'Tailwind CSS', 'Astro', 'Vite', 'Alpine.js'],
+    skills: ['React 19', 'TypeScript', 'Tailwind CSS', 'Astro', 'Vite', 'Vitest'],
   },
   {
     id: 'mobile',
@@ -41,7 +41,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'ai-tools',
     label: { en: 'AI Tools', es: 'Herramientas IA' },
-    skills: ['Claude Code', 'Gemini CLI', 'GitHub Copilot'],
+    skills: ['Pi Agent', 'OpenCode', 'Codex'],
   },
   {
     id: 'soft-skills',
