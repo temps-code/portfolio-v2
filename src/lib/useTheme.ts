@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react'
 type Theme = 'dark' | 'light'
 
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'dark'
-    return (localStorage.getItem('theme') as Theme) ?? 'dark'
-  })
+  const [theme, setTheme] = useState<Theme>('dark')
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme') as Theme | null
+    if (saved) setTheme(saved)
+  }, [])
 
   useEffect(() => {
     function handleThemeChange(e: Event) {
