@@ -18,6 +18,22 @@ export function useTranslation() {
     return () => window.removeEventListener('locale-change', handleLocaleChange)
   }, [])
 
+  useEffect(() => {
+    const meta = getTranslation(locale).meta
+    const setMetaContent = (selector: string, content: string) => {
+      document.querySelector<HTMLMetaElement>(selector)?.setAttribute('content', content)
+    }
+
+    document.documentElement.lang = locale
+    document.querySelector('title')?.replaceChildren(meta.title)
+    setMetaContent('meta[name="description"]', meta.description)
+    setMetaContent('meta[property="og:title"]', meta.title)
+    setMetaContent('meta[property="og:description"]', meta.description)
+    setMetaContent('meta[property="og:locale"]', meta.locale)
+    setMetaContent('meta[name="twitter:title"]', meta.title)
+    setMetaContent('meta[name="twitter:description"]', meta.description)
+  }, [locale])
+
   function toggle() {
     const next: Locale = locale === 'en' ? 'es' : 'en'
     localStorage.setItem('locale', next)
