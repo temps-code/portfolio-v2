@@ -5,18 +5,6 @@ import { fadeInUp, staggerContainer, scaleIn } from '../../lib/animations'
 import { Button } from '../ui/Button'
 import { cn } from '../../lib/utils'
 
-const CODE_TEXT = `const developer = {
-  name: "Diego Vargas",
-  role: "Backend Developer",
-  focus: "backend systems",
-  stack: {
-    backend: [".NET / C#", "PostgreSQL", "Supabase"],
-    frontend: ["React", "TypeScript", "React Native"],
-  },
-  architecture: ["Clean Architecture", "SOLID"],
-  available: true,
-}`
-
 export function Hero() {
   const { t, locale } = useTranslation()
 
@@ -80,7 +68,7 @@ export function Hero() {
             animate="visible"
             className="hidden lg:block"
           >
-            <CodeBlock />
+            <CodeBlock key={locale} text={t.hero.code} />
           </motion.div>
         </div>
       </div>
@@ -88,22 +76,25 @@ export function Hero() {
   )
 }
 
-function CodeBlock() {
+function CodeBlock({ text }: { text: string }) {
   const [displayed, setDisplayed] = useState('')
   const [done, setDone] = useState(false)
 
   useEffect(() => {
     let i = 0
+    setDisplayed('')
+    setDone(false)
+
     const interval = setInterval(() => {
       i++
-      setDisplayed(CODE_TEXT.slice(0, i))
-      if (i >= CODE_TEXT.length) {
+      setDisplayed(text.slice(0, i))
+      if (i >= text.length) {
         clearInterval(interval)
         setDone(true)
       }
     }, 18)
     return () => clearInterval(interval)
-  }, [])
+  }, [text])
 
   return (
     <div className="rounded-lg bg-surface-container dark:bg-surface-container-dark p-6 font-mono text-sm leading-relaxed">

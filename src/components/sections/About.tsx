@@ -5,11 +5,7 @@ import { fadeInUp, staggerContainer } from '../../lib/animations'
 export function About() {
   const { t } = useTranslation()
 
-  const stats = [
-    { value: '2+', label: t.about.years_experience },
-    { value: '3', label: t.about.major_projects },
-    { value: '6', label: t.about.tech_stacks },
-  ]
+  const stats = t.about.metrics
 
   return (
     <section id="about" className="py-20 lg:min-h-screen lg:flex lg:items-center lg:py-0 lg:pb-[14rem]">
@@ -64,7 +60,7 @@ export function About() {
 
           <motion.div
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2"
           >
             {stats.map((stat) => (
               <motion.div

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { en } from '../i18n/en'
 
 interface Props {
   title?: string
@@ -7,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = 'Diego Vargas — Backend Developer',
-  description = 'Backend Developer based in Bolivia. I build robust systems with .NET, PostgreSQL, and React — from architecture to production.',
+  title = en.meta.title,
+  description = en.meta.description,
 } = Astro.props
 
 const site = 'https://diego-vargas.vercel.app'
@@ -35,7 +36,7 @@ const ogImage = `${site}/og-image.jpg`
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={en.meta.locale} />
     <meta property="og:site_name" content="Diego Vargas — Portfolio" />
 
     <!-- Twitter Card -->
@@ -50,13 +51,13 @@ const ogImage = `${site}/og-image.jpg`
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Diego Vargas",
-        "jobTitle": "Backend Developer",
+        "jobTitle": "Software Developer",
         "url": "https://diego-vargas.vercel.app",
         "sameAs": [
           "https://github.com/temps-code",
           "https://www.linkedin.com/in/diego-vargas-urzagaste-40411a3bb/"
         ],
-        "knowsAbout": ["Backend Development", ".NET", "C#", "PostgreSQL", "Docker", "React"]
+        "knowsAbout": ["Software Development", ".NET", "C#", "PostgreSQL", "Docker", "React"]
       }
     </script>
 

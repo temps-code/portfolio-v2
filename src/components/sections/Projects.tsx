@@ -117,7 +117,7 @@ function ProjectCard({ project, locale, t, onExpand }: ProjectCardProps) {
         >
           <img
             src={project.imageUrl}
-            alt={project.title}
+            alt={`${project.title} — ${project.imageLabel?.[locale] ?? t.projects.mockup}`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
@@ -140,7 +140,10 @@ function ProjectCard({ project, locale, t, onExpand }: ProjectCardProps) {
           {project.title}
         </h3>
         <p className="text-xs font-label text-accent">
-          {project.role}
+          {project.role[locale]}
+        </p>
+        <p className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark">
+          {t.projects.status[project.status]}
         </p>
         <p className="text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark leading-relaxed">
           {project.description[locale]}
@@ -248,7 +251,7 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
                     : 'text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark'
                 }`}
               >
-                {project.imageLabel ?? 'MockUp'}
+                {project.imageLabel?.[locale] ?? t.projects.mockup}
               </button>
               <button
                 onClick={() => setActiveTab('screenshot')}
@@ -258,24 +261,24 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
                     : 'text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark'
                 }`}
               >
-                {project.screenshotLabel ?? (locale === 'es' ? 'Captura' : 'Screenshot')}
+                {project.screenshotLabel?.[locale] ?? t.projects.screenshot}
               </button>
             </div>
           ) : (
-            <span className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark">{project.imageLabel ?? 'MockUp'}</span>
+            <span className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark">{project.imageLabel?.[locale] ?? t.projects.mockup}</span>
           )}
           <div className="flex items-center gap-1">
             <button
               onClick={() => setIsFullscreen(true)}
               className="p-1.5 rounded-full text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark transition-colors"
-              aria-label="Fullscreen"
+              aria-label={t.projects.fullscreen}
             >
               <MaximizeIcon />
             </button>
             <button
               onClick={onClose}
               className="p-1.5 rounded-full text-on-surface-variant dark:text-on-surface-variant-dark hover:bg-surface-container-high dark:hover:bg-surface-container-high-dark transition-colors"
-              aria-label="Close"
+              aria-label={t.projects.close}
             >
               <CloseIcon />
             </button>
@@ -291,7 +294,7 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
             <motion.img
               key={activeTab}
               src={currentImage}
-              alt={`${project.title} — ${activeTab}`}
+              alt={`${project.title} — ${activeTab === 'mockup' ? project.imageLabel?.[locale] ?? t.projects.mockup : project.screenshotLabel?.[locale] ?? t.projects.screenshot}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -312,7 +315,10 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
             <h3 className="font-headline font-bold text-xl text-on-surface dark:text-on-surface-dark">
               {project.title}
             </h3>
-            <p className="text-xs font-label text-accent mt-1">{project.role}</p>
+            <p className="text-xs font-label text-accent mt-1">{project.role[locale]}</p>
+            <p className="text-xs font-label text-on-surface-variant dark:text-on-surface-variant-dark mt-1">
+              {t.projects.status[project.status]}
+            </p>
           </div>
           <p className="text-sm font-body text-on-surface-variant dark:text-on-surface-variant-dark leading-relaxed">
             {(project.detailedDescription ?? project.description)[locale]}
@@ -370,13 +376,13 @@ function ProjectModal({ project, locale, t, activeTab, setActiveTab, onClose }: 
             <button
               className="absolute top-4 right-4 p-2 text-white/70 hover:text-white rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               onClick={() => setIsFullscreen(false)}
-              aria-label="Exit fullscreen"
+              aria-label={`${t.projects.close} — ${t.projects.fullscreen}`}
             >
               <CloseIcon />
             </button>
             <img
               src={currentImage}
-              alt={`${project.title} — ${activeTab}`}
+              alt={`${project.title} — ${activeTab === 'mockup' ? project.imageLabel?.[locale] ?? t.projects.mockup : project.screenshotLabel?.[locale] ?? t.projects.screenshot}`}
               className="max-w-full max-h-full object-contain"
               onClick={(e) => e.stopPropagation()}
             />
